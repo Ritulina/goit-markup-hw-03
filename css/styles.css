@@ -91,6 +91,7 @@ button {
    letter-spacing: var(--letter-spacing-02);
    display: inline-block;
    line-height: var(--line-height-16px-14px);
+   color: var(--h-color);
 }
 
 .menu-container .menu:hover,

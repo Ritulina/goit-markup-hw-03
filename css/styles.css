@@ -6,6 +6,7 @@
    --bgd-color: #2F303A;
    --btn-bgd-color: #F5F4FA;
    --border-color-portf: #EEEEEE;
+   --border-color-header: #ECECEC;
    --letter-spacing-02: 0.02em;
    --letter-spacing-03: 0.03em;
    --letter-spacing-06: 0.06em;
@@ -60,6 +61,12 @@ ul {
 button {
    cursor: pointer;
 }
+h2 {
+   margin: 0 0;
+}
+h3 {
+   margin: 0 0;
+}
 .menu {
    text-decoration: none;
 }
@@ -74,11 +81,18 @@ section {
 /* Header section*/
 .header-section {
    padding-top: 0px;
+   border-bottom: 1px solid var(--border-color-header);
 }
 .nav-container {
    display: flex;
-   justify-content: space-between;
    align-items: center;
+}
+.nav-ref-container {
+   display: flex;
+   align-items: center;
+   padding-left: 92px;
+   padding-top: 32px;
+   padding-bottom: 32px;
 }
 .header-logo-web {
    padding-top: 24px;
@@ -100,12 +114,11 @@ section {
    line-height: var(--line-height-31px-26px);
    letter-spacing: var(--letter-spacing-03);  
 }
-
 .menu-container {
-   align-items: center;
-   gap: 50px;
    display: flex;
+   align-items: center;
    justify-content: space-between;
+   gap: 50px;
    font-weight: 500;
    font-size: 14px;
    letter-spacing: var(--letter-spacing-02);
@@ -114,7 +127,6 @@ section {
 .menu-container .menu {
    color: var(--h-color);
 }
-
 .menu-container .menu:hover,
 .menu-container .menu:focus {
    color: var(--blue-color);
@@ -122,12 +134,14 @@ section {
 .menu-container .menu:active {
    color: var(--blue-color);
 }
-
+.nav-contacts-container {
+   padding-left: 344px;
+}
 .contacts-container {
    align-items: center;
+   justify-content: space-between;
    gap: 50px;
    display: flex;
-   justify-content: space-between;
    font-size: 14px;
    line-height: var(--line-height-16px-14px);
    font-weight: 500;
@@ -143,7 +157,6 @@ section {
 .contacts-container .contact-email:active {
    color: var(--blue-color);
 }
-
 .contacts-container .contact-tel {
    color: var(--p-color);
 }
@@ -151,29 +164,24 @@ section {
 .contacts-container .contact-tel:focus {
    color: var(--blue-color);
 }
-
 .contacts-container .contact-tel:active {
    color: var(--blue-color);
 }
-
 /* Hero section */
 .hero-section {
-   padding-top: 0px;
+   padding-top: 200px;
+   padding-bottom: 200px;
    margin: 0 auto;
    background: var(--bgd-color);
 }
 .hero-container {
    display: flex;
    flex-direction: column;
-   
-   align-content:center;
-   justify-content: space-between;
+   justify-content:center;
    gap: 30px;
-
 }
 .hero-title {
    align-self: center;
-   margin-top: 280px;
    display: flex;
    text-align: center;
    max-width: 696px;
@@ -187,8 +195,6 @@ section {
    align-self: center;
    display: flex;
    min-width: 216px;
-   margin-top: 30px;
-   margin-bottom: 200px;
    padding: 10px 32px;    
    font-family: inherit;
    font-weight: 700;
@@ -216,7 +222,7 @@ section {
    flex-basis: calc((100% - 90)/ 4);
 } 
 .feature-header{
-   padding-bottom: 10px;
+   margin-bottom: 10px;
    font-weight: 700;
    font-size: 14px;
    line-height: var(--line-height-16px-14px);
@@ -237,9 +243,12 @@ section {
 }
 .business-container {
    display: flex;
-   align-content: center;
+   flex-wrap: wrap;
+   justify-content: center;
+   padding-bottom: 94px;
 }
 .subtitle {
+   margin-bottom: 50px;
    text-align: center;
    font-weight: 700;
    font-size: 36px;
@@ -251,7 +260,6 @@ section {
    display: flex;
    flex-wrap: wrap;
    gap: 30px;
-   padding-top: 50px;
 }
 /* Team section */
 .team-section {
@@ -262,11 +270,8 @@ section {
    display: flex;
    gap: 30px;
 }
-.team-avatar{
-   margin-bottom: 30px;
-}
 .team-name {
-   margin-bottom: 10px;
+   padding-bottom: 10px;
    text-transform: none;
    font-size: 16px;
    font-weight: 500;
@@ -274,7 +279,6 @@ section {
    letter-spacing: var(--letter-spacing-03);
 }
 .team-descr {
-   margin-bottom: 30px;
    font-size: 16px;
    font-weight: 400;
    line-height: var(--line-height-19px-16px);
@@ -285,14 +289,19 @@ section {
    background: var(--white-color);
    display: flex;
    max-width: 270px;
+   flex-direction: column;   
+}
+.team-card-container-h3-p {
+   display: flex;
    flex-direction: column;
    align-items: center;
-   
+   padding: 30px;
 }
 /* Footer section*/
 footer{
    background: var(--bgd-color);
    margin: 0 auto;
+   padding-top: 94px;
 }
 .footer-container {
    display: flex;
@@ -307,7 +316,6 @@ footer{
    letter-spacing: var(--letter-spacing-03);
 }
 .container-logo{
-   padding-top: 60px;
    padding-bottom: 20px;
 }
 .container-ref{
@@ -324,8 +332,10 @@ footer{
       line-height: var(--line-height-31px-26px);
       letter-spacing: var(--letter-spacing-03);
 }
-.footer-ref-address{
+.footer-address {
    padding-bottom: 9px;
+}
+.footer-ref-address{
    font-style: normal;
    font-weight: 400;
    color: var(--white-color);
@@ -342,7 +352,9 @@ footer{
 .footer-ref{
    line-height: var(--line-height-24px-14px);
    font-style: normal;
-   padding-bottom: 60px;
+}
+.footer-ref-email {
+   padding-bottom: 9px;
 }
 .footer-ref .ref-email{
    padding-bottom: 9px;
@@ -355,6 +367,9 @@ footer{
 }
 .footer-ref .ref-email:active {
    color: var(--blue-color);
+}
+.footer-ref-number {
+   padding-bottom: 60px;
 }
 .footer-ref .ref-number {
    padding-bottom: 9px;
@@ -385,10 +400,14 @@ footer{
 .buttons-list {
    display: flex;
    flex-wrap: wrap;
-   gap: 8px;
+   margin-bottom: 50px;
 }
 .button-portfolio {
+   display: inline-block;
+   height: 38px;
    min-width: 74px;
+   padding: 0px 22px;
+   margin-right: 30px;
    font-family: 'Roboto';
    cursor: pointer;
    font-weight: 500;
@@ -396,6 +415,9 @@ footer{
    letter-spacing: var(--letter-spacing-03);
    line-height: var(--line-height-26px-16px);
    border-radius: 4px;
+}
+.button-portfolio:first-child {
+   padding: 0px 25px;
 }
 .buttons-container .button-portfolio {
    color: var(--h-color-);
@@ -416,20 +438,21 @@ footer{
 .cards-list {
    display: flex;
    flex-wrap: wrap;
-   /* зробила геп 26пх бо не поміщається три сповпчики через бордер, як врахувати його величину у розмір картки? */
-   gap: 26px;  
+   gap: 30px;  
 }
-.card-item {
+.container-card-h3-p {
    border: 1px solid var(--border-color-portf);
-   flex-basis: calc((100% - 60px) / 3);
 }
 .container-card {
    display: flex;
    flex-direction: column;
+   padding-top: 20px;
+   padding-bottom: 20px;
 }
 .project-title {
-   margin-left: 24px;
-   margin-top: 30px; 
+   padding-left: 24px;
+   padding-top: 20px; 
+   padding-bottom: 4px;
    color: var(--h-color);
    letter-spacing: var(--letter-spacing-06);
    line-height: var(--line-height-36px-18px);
@@ -437,9 +460,9 @@ footer{
    font-size: 18px;
 }
 .project-descr {
-   margin-left: 24px;
-   margin-top: 4px; 
-   margin-bottom: 24px;
+   padding-left: 24px;
+   padding-top: 4px; 
+   padding-bottom: 24px;
    line-height: var(--letter-spacing-03);
    letter-spacing: var(--line-height-30px-16px);
    font-weight: 400;

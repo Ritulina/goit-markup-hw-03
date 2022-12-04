@@ -214,6 +214,7 @@ section {
 /* Features section */
 .features-section {
    margin: 0 auto;   
+   padding-bottom: 0;
 }
 .features-container {
    display: flex;
@@ -390,23 +391,19 @@ footer{
 /* Projects Section */
 .projects-container {
    display: flex;
-   flex-direction: column;
-   gap: 34px;
-   margin-bottom: 50px;
+   flex-direction: column;   
 }
 .buttons-list {
    display: flex;
    flex-wrap: wrap;
    justify-content: center;
+   margin-bottom: 50px;
 }
 .buttons-item {
    margin-right: 8px;
 }
 .button-portfolio {
-   display: inline-block;
-   height: 38px;
-   min-width: 74px;
-   padding: 0px 22px;
+   padding: 6px 22px;
    font-family: 'Roboto';
    cursor: pointer;
    font-weight: 500;
@@ -414,9 +411,6 @@ footer{
    letter-spacing: var(--letter-spacing-03);
    line-height: var(--line-height-26px-16px);
    border-radius: 4px;
-}
-.button-portfolio:first-child {
-   padding: 0px 25px;
 }
 .buttons-list .button-portfolio {
    color: var(--h-color-);
@@ -447,7 +441,7 @@ footer{
 }
 .container-card {
    display: flex;
-   weight:370px;
+   width: 370px;
    height: 404px;
    flex-direction: column;
 }
